@@ -1,0 +1,249 @@
+2021-02-14 13:31:04.450  INFO 36006 --- [main] com.example.blog_app.BlogAppApplication  : Starting BlogAppApplication using Java 13.0.4 on yo-X556UQKyo with PID 36006 (/home/yo/Documents/develop/tecnologias/spring_boot/blog_app/target/classes started by yo in /home/yo/Documents/develop/tecnologias/spring_boot/blog_app)
+2021-02-14 13:31:04.454  INFO 36006 --- [main] com.example.blog_app.BlogAppApplication  : No active profile set, falling back to default profiles: default
+2021-02-14 13:31:05.242  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 13:31:05.244  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-02-14 13:31:05.248 DEBUG 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JDBC repositories in packages com.example.blog_app.
+2021-02-14 13:31:05.255  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2021-02-14 13:31:05.268  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 13:31:05.270  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-14 13:31:05.276 DEBUG 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.example.blog_app.
+2021-02-14 13:31:05.278  INFO 36006 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-02-14 13:31:05.807  INFO 36006 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-14 13:31:05.819  INFO 36006 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-14 13:31:05.819  INFO 36006 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-14 13:31:05.915  INFO 36006 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/blog]   : Initializing Spring embedded WebApplicationContext
+2021-02-14 13:31:05.915  INFO 36006 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1408 ms
+2021-02-14 13:31:06.092  INFO 36006 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-14 13:31:06.129  INFO 36006 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-14 13:31:06.227  INFO 36006 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-14 13:31:06.299  INFO 36006 --- [main] com.zaxxer.hikari.HikariDataSource       : postgres - Starting...
+2021-02-14 13:31:07.346 ERROR 36006 --- [main] com.zaxxer.hikari.pool.HikariPool        : postgres - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "yo"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.example.blog_app.BlogAppApplication.main(BlogAppApplication.java:10) ~[classes/:na]
+
+2021-02-14 13:31:07.351  WARN 36006 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "yo"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:613) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:161) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:121) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.example.blog_app.BlogAppApplication.main(BlogAppApplication.java:10) ~[classes/:na]
+
+2021-02-14 13:31:07.374 ERROR 36006 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-02-14 13:31:07.377  WARN 36006 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-02-14 13:31:07.400  INFO 36006 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-02-14 13:31:07.454  INFO 36006 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-02-14 13:31:07.486 ERROR 36006 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.example.blog_app.BlogAppApplication.main(BlogAppApplication.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 17 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:137) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.27.Final.jar:5.4.27.Final]
+	... 34 common frames omitted
+
+2021-02-14 13:33:25.744  INFO 36142 --- [main] com.example.blog_app.BlogAppApplication  : Starting BlogAppApplication using Java 13.0.4 on yo-X556UQKyo with PID 36142 (/home/yo/Documents/develop/tecnologias/spring_boot/blog_app/target/classes started by yo in /home/yo/Documents/develop/tecnologias/spring_boot/blog_app)
+2021-02-14 13:33:25.749  INFO 36142 --- [main] com.example.blog_app.BlogAppApplication  : No active profile set, falling back to default profiles: default
+2021-02-14 13:33:26.426  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 13:33:26.428  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-02-14 13:33:26.433 DEBUG 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JDBC repositories in packages com.example.blog_app.
+2021-02-14 13:33:26.439  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2021-02-14 13:33:26.448  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-14 13:33:26.450  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-14 13:33:26.454 DEBUG 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.example.blog_app.
+2021-02-14 13:33:26.456  INFO 36142 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2021-02-14 13:33:26.862  INFO 36142 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-14 13:33:26.871  INFO 36142 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-14 13:33:26.871  INFO 36142 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-14 13:33:26.947  INFO 36142 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/blog]   : Initializing Spring embedded WebApplicationContext
+2021-02-14 13:33:26.948  INFO 36142 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1135 ms
+2021-02-14 13:33:27.121  INFO 36142 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-14 13:33:27.164  INFO 36142 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-14 13:33:27.281  INFO 36142 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-14 13:33:27.362  INFO 36142 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-14 13:33:27.440  INFO 36142 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-14 13:33:27.464  INFO 36142 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-02-14 13:33:27.687  INFO 36142 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-14 13:33:27.695  INFO 36142 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-14 13:33:27.762  WARN 36142 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-14 13:33:27.884  INFO 36142 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-14 13:33:28.085 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDateTime as reading converter.
+2021-02-14 13:33:28.087 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.sql.Timestamp as writing converter.
+2021-02-14 13:33:28.088 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalDate as reading converter.
+2021-02-14 13:33:28.088 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.sql.Timestamp as writing converter.
+2021-02-14 13:33:28.088 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.LocalTime as reading converter.
+2021-02-14 13:33:28.089 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.sql.Timestamp as writing converter.
+2021-02-14 13:33:28.089 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.sql.Timestamp to class java.time.Instant as reading converter.
+2021-02-14 13:33:28.089 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.sql.Timestamp as writing converter.
+2021-02-14 13:33:28.089 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDateTime as reading converter.
+2021-02-14 13:33:28.089 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.util.Date as writing converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalDate as reading converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDate to class java.util.Date as writing converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.LocalTime as reading converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalTime to class java.util.Date as writing converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.util.Date to class java.time.Instant as reading converter.
+2021-02-14 13:33:28.090 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.util.Date as writing converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.LocalDateTime to class java.time.Instant as reading converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Instant to class java.time.LocalDateTime as reading converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.ZoneId to class java.lang.String as writing converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.ZoneId as reading converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Duration to class java.lang.String as writing converter.
+2021-02-14 13:33:28.091 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Duration as reading converter.
+2021-02-14 13:33:28.092 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.time.Period to class java.lang.String as writing converter.
+2021-02-14 13:33:28.092 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Period as reading converter.
+2021-02-14 13:33:28.092 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDate as reading converter.
+2021-02-14 13:33:28.092 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.LocalDateTime as reading converter.
+2021-02-14 13:33:28.092 DEBUG 36142 --- [main] o.s.data.convert.CustomConversions       : Adding converter from class java.lang.String to class java.time.Instant as reading converter.
+2021-02-14 13:33:28.189  INFO 36142 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/blog'
+2021-02-14 13:33:28.200  INFO 36142 --- [main] com.example.blog_app.BlogAppApplication  : Started BlogAppApplication in 2.86 seconds (JVM running for 3.476)
+2021-02-14 14:48:47.318  INFO 36142 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-14 14:48:47.331  INFO 36142 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-02-14 14:48:47.345  INFO 36142 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-02-14 14:48:47.370  INFO 36142 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
